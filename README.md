@@ -9,7 +9,7 @@ This Chrome extension is designed to enhance your experience while using Conflue
 
 ## Installation
 
-1. Download the zip file from the [latest release](https://github.com/VeejaLiu/ConfluenceSideNavbar/releases/latest).
+1. Download the zip file from the [latest release](https://github.com/VeejaLiu/ConfluenceSideBar/releases/latest).
 2. Unzip the file.
 3. Open Chrome and go to `chrome://extensions/`.
     - You can also access this page by clicking the Chrome menu on the top right corner, then select `More tools` -> `Extensions`.
