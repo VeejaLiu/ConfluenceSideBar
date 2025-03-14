@@ -69,7 +69,19 @@ export default function App() {
       {/* 侧边栏内容 */}
       {headings.length > 0 && (
         <div
-          className={`fixed right-0 top-1/2 w-[15%] max-w-[250px] h-1/2 bg-[rgb(235,236,240)] p-[10px] z-[99] rounded-[10px] overflow-y-scroll overflow-x-hidden transform -translate-y-1/2 ${!isVisible ? 'hidden' : ''}`}>
+          className={`
+          fixed 
+          right-0 
+          top-1/2 
+          w-[15%] 
+          max-w-[500px] min-w-[250px] 
+          h-1/2 
+          bg-gray-400
+          p-2 z-50 
+          rounded-tl-xl 
+          rounded-bl-xl 
+          overflow-y-scroll 
+          overflow-x-hidden transform -translate-y-1/2 ${!isVisible ? 'hidden' : ''}`}>
           {headings.map((heading, index) => (
             <a
               key={index}
