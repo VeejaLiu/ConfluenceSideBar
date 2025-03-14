@@ -1,11 +1,11 @@
 {
   "extensionDescription": {
-    "description": "Extension description",
-    "message": "Chrome extension boilerplate developed with Vite, React and Typescript"
+    "description": "A detailed description of the extension's functionality.",
+    "message": "This Chrome extension is designed to enhance your experience while using Confluence by adding a side navbar. The side navbar will help you quickly locate content, making it easier and faster to access the information you need."
   },
   "extensionName": {
     "description": "Extension name",
-    "message": "Chrome extension boilerplate"
+    "message": "ConfluenceSideBar"
   },
   "toggleTheme": {
     "message": "Toggle theme"

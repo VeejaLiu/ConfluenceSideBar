@@ -1,11 +1,11 @@
 {
   "extensionDescription": {
     "description": "Extension description",
-    "message": "React, Typescript, Vite를 사용한 크롬 익스텐션 보일러플레이트입니다."
+    "message": "Confluence를 사용하면서 경험을 향상시키기 위해 설계된 Chrome 익스텐션으로, 사이드 내비게이션 바를 추가합니다. 이 내비게이션 바는 콘텐츠를 신속하게 찾을 수 있도록 도와줍니다."
   },
   "extensionName": {
     "description": "Extension name",
-    "message": "크롬 익스텐션 보일러플레이트"
+    "message": "ConfluenceSideBar"
   },
   "toggleTheme": {
     "message": "테마 변경"
