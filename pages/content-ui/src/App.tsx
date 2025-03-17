@@ -88,8 +88,9 @@ export default function App() {
           top-1/2
           h-1/2
           bg-gray-300
-          p-4
-          z-40
+          px-4
+          pb-8
+          z-4
           rounded-tl-lg
           rounded-bl-lg
           overflow-y-auto
@@ -107,10 +108,21 @@ export default function App() {
               <a
                 key={index}
                 href={`#${heading.href}`}
-                className="block whitespace-nowrap overflow-hidden text-ellipsis hover:underline"
+                className={`
+                  block 
+                  whitespace-nowrap 
+                  overflow-hidden 
+                  text-ellipsis 
+                  hover:underline
+                  ${index > 0 ? 'mt-1' : ''}
+                  ${heading.level === 1 ? 'mt-3 text-base' : ''}
+                  ${heading.level === 2 ? 'mt-2 text-sm' : ''}
+                  ${heading.level === 3 ? 'mt-1 text-xs' : ''}
+                  ${heading.level > 3 ? 'text-xs opacity-80' : ''}
+                `}
                 style={{
-                  paddingLeft: `${(heading.level - 1) * 10}px`,
-                  fontWeight: heading.level === 1 ? 'bold' : 'normal',
+                  paddingLeft: `${(heading.level - 1) * 12}px`,
+                  fontWeight: heading.level <= 2 ? (heading.level === 1 ? '600' : '500') : 'normal',
                 }}
                 title={heading.text}>
                 {heading.text}
