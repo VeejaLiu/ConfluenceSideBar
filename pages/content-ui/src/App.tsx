@@ -60,19 +60,23 @@ export default function App() {
     <>
       {/* 侧边栏切换按钮 */}
       <button
-        className={`fixed 
-        right-0 
-        top-[45%] 
+        className={`fixed
+        right-0
+        top-[45%]
         w-8 h-8
-        border-none 
-        bg-gray-300 
-        text-black 
+        border-none
+        bg-gray-300
+        text-black
         z-50
         rounded-tl-md
         rounded-bl-md
+        transition-transform
+        duration-300
         `}
         onClick={toggleVisibility}>
-        <span className={`${isVisible ? 'rotate-0' : 'rotate-180'}`}>➤</span>
+        <span className={`inline-block transition-transform duration-300 ${isVisible ? 'rotate-0' : 'rotate-180'}`}>
+          ➤
+        </span>
       </button>
 
       {/* 侧边栏内容 */}
@@ -82,31 +86,37 @@ export default function App() {
           fixed
           right-0
           top-1/2
-          w-72
           h-1/2
           bg-gray-300
           p-4
           z-40
           rounded-tl-lg
           rounded-bl-lg
-          overflow-y-scroll
+          overflow-y-auto
           overflow-x-hidden
           transform
           -translate-y-1/2
-          ${!isVisible ? 'hidden' : ''}`}>
-          {headings.map((heading, index) => (
-            <a
-              key={index}
-              href={`#${heading.href}`}
-              className="block whitespace-nowrap overflow-hidden text-ellipsis hover:underline"
-              style={{
-                paddingLeft: `${(heading.level - 1) * 10}px`,
-                fontWeight: heading.level === 1 ? 'bold' : 'normal',
-              }}
-              title={heading.text}>
-              {heading.text}
-            </a>
-          ))}
+          transition-all
+          duration-300
+          ease-in-out
+          ${isVisible ? 'w-72 opacity-100' : 'w-0 opacity-0 hidden transition-[width,opacity] delay-300'}
+          `}
+          style={{ transitionProperty: 'width, opacity' }}>
+          <div className={`transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            {headings.map((heading, index) => (
+              <a
+                key={index}
+                href={`#${heading.href}`}
+                className="block whitespace-nowrap overflow-hidden text-ellipsis hover:underline"
+                style={{
+                  paddingLeft: `${(heading.level - 1) * 10}px`,
+                  fontWeight: heading.level === 1 ? 'bold' : 'normal',
+                }}
+                title={heading.text}>
+                {heading.text}
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </>
