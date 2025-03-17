@@ -4,8 +4,8 @@ This Chrome extension is designed to enhance your experience while using Conflue
 
 ## Demo
 
-<img src="doc-images/v1.3.0-main.png" alt="img.png" width="800" />
-<img src="doc-images/v1.3.0-quickjump.png" alt="img.png" width="398" />
+<img src="doc-images/v1.3.0-main.jpg" alt="img.png" width="720" />
+<img src="doc-images/v1.3.0-quickjump.jpg" alt="img.png" width="720" />
 
 ## Installation
 
