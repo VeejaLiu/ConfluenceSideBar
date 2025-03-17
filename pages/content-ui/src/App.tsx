@@ -60,28 +60,40 @@ export default function App() {
     <>
       {/* 侧边栏切换按钮 */}
       <button
-        className="fixed right-0 top-[45%] w-[30px] h-[30px] border-none bg-[rgb(235,236,240)] text-black z-[100]"
-        style={{ transform: isVisible ? 'rotate(0deg)' : 'rotate(180deg)' }}
+        className={`fixed 
+        right-0 
+        top-[45%] 
+        w-8 h-8
+        border-none 
+        bg-gray-300 
+        text-black 
+        z-50
+        rounded-tl-md
+        rounded-bl-md
+        `}
         onClick={toggleVisibility}>
-        ➤
+        <span className={`${isVisible ? 'rotate-0' : 'rotate-180'}`}>➤</span>
       </button>
 
       {/* 侧边栏内容 */}
       {headings.length > 0 && (
         <div
           className={`
-          fixed 
-          right-0 
-          top-1/2 
-          w-[15%] 
-          max-w-[500px] min-w-[250px] 
-          h-1/2 
-          bg-gray-400
-          p-2 z-50 
-          rounded-tl-xl 
-          rounded-bl-xl 
-          overflow-y-scroll 
-          overflow-x-hidden transform -translate-y-1/2 ${!isVisible ? 'hidden' : ''}`}>
+          fixed
+          right-0
+          top-1/2
+          w-72
+          h-1/2
+          bg-gray-300
+          p-4
+          z-40
+          rounded-tl-lg
+          rounded-bl-lg
+          overflow-y-scroll
+          overflow-x-hidden
+          transform
+          -translate-y-1/2
+          ${!isVisible ? 'hidden' : ''}`}>
           {headings.map((heading, index) => (
             <a
               key={index}
