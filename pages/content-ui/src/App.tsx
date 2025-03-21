@@ -100,7 +100,7 @@ export default function App() {
           transition-all
           duration-300
           ease-in-out
-          ${isVisible ? 'w-72 opacity-100' : 'w-0 opacity-0 hidden transition-[width,opacity] delay-300'}
+          ${isVisible ? 'w-72 opacity-100' : 'w-0 opacity-0'}
           `}
           style={{ transitionProperty: 'width, opacity' }}>
           <div className={`transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
